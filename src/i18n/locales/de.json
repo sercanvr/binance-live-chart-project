@@ -1,0 +1,79 @@
+{
+"nav": {
+    "title": "Binance Live Chart"
+},
+"market": {
+    "realTimePrice": "Echtzeit-Preis",
+    "change1s": "1s Änderung",
+    "title": "Markt",
+    "trade": "Handeln",
+    "perp": "PERP",
+    "loading": "Laden...",
+    "insights": "Markt-Einblicke",
+    "dataProvided": "Daten bereitgestellt von Binance"
+},
+"coins": {
+"btc": {
+    "description": "Bitcoin (BTC) ist die weltweit erste und größte dezentrale digitale Währung, die 2009 von dem pseudonymen Satoshi Nakamoto geschaffen wurde. Ohne Zentralbank- oder Regierungsautorität operiert Bitcoin auf Peer-to-Peer-Netzwerktechnologie. Das Gesamtangebot ist auf 21 Millionen BTC begrenzt, was ihm den Titel 'digitales Gold' eingebracht hat.",
+    "description2": "Das vierte Halving-Event 2024 reduzierte die Blockbelohnung von 6,25 auf 3,125 BTC und schränkte das Angebot weiter ein. Die Genehmigung von Spot-Bitcoin-ETFs durch die SEC hat den institutionellen Kapitalzufluss erheblich beschleunigt. Second-Layer-Lösungen wie das Lightning Network machen Mikrozahlungen und alltägliche Anwendungen zunehmend verbreitet.",
+    "description3": "Bitcoin-Mining durchläuft eine bedeutende Transformation hin zu ökologischer Nachhaltigkeit durch erneuerbare Energien. Mining-Anlagen in Island, Norwegen und Kanada nutzen Geothermie und Wasserkraft und reduzieren den CO2-Fußabdruck erheblich. Innovationen wie das Stratum V2-Protokoll ermöglichen effizienteres und dezentraleres Mining.",
+    "description4": "Entwicklungen in der Bitcoin-Programmierbarkeit sind ebenfalls bemerkenswert. Das Ordinals-Protokoll ermöglicht NFT-ähnliche digitale Artefakte auf der Bitcoin-Blockchain, während der BRC-20-Token-Standard die Token-Erstellung ermöglicht. Diese Innovationen zeigen Bitcoins Potenzial, sich zu einer breiteren Anwendungsplattform zu entwickeln.",
+    "description5": "Institutionelle Adoption durch MicroStrategy, Tesla und verschiedene Staatsfonds stärkt die Digital-Gold-Erzählung. Länder wie El Salvador, die Bitcoin als gesetzliches Zahlungsmittel akzeptieren, festigen die Mission der globalen finanziellen Inklusion. Bitcoin schreitet voran, zum Eckpfeiler der zukünftigen Finanzinfrastruktur zu werden."
+    },
+"eth": {
+    "description": "Ethereum (ETH) ist eine dezentrale Blockchain-Plattform, die 2015 von Vitalik Buterin gegründet wurde und Smart-Contract-Technologie vorantrieb. Ethereum bildet die Infrastruktur für DeFi-, NFT- und DAO-Ökosysteme. Mit dem Merge-Upgrade 2022 wechselte Ethereum zu Proof-of-Stake und reduzierte den Energieverbrauch um 99,95%.",
+    "description2": "Das Dencun-Upgrade führte Proto-Danksharding (EIP-4844) ein und senkte die Layer-2-Kosten dramatisch. Rollup-Netzwerke wie Arbitrum, Optimism und Base ermöglichen Zehntausende Transaktionen pro Sekunde zu niedrigen Gebühren. Der ERC-4337 Account-Abstraction-Standard bringt die Benutzererfahrung näher an Web2.",
+    "description3": "Ethereums Restaking-Ökosystem ermöglicht durch Protokolle wie EigenLayer die Erweiterung der gestakten ETH-Sicherheit auf mehrere Netzwerke. Liquid Staking Derivatives (LSDs) bieten Nutzern die Möglichkeit, Staking-Erträge zu erzielen und gleichzeitig an DeFi-Protokollen teilzunehmen.",
+    "description4": "Ethereum ist weiterhin Vorreiter bei dezentralen sozialen Medien (Lens Protocol, Farcaster), dezentraler Wissenschaft (DeSci) und Real-World-Asset-Tokenisierung (RWA). Die Tokenisierung traditioneller Vermögenswerte auf Ethereum öffnet die Tür für Billionen-Dollar-Märkte auf der Blockchain.",
+    "description5": "Die langfristige Roadmap der Ethereum Foundation zielt darauf ab, die Skalierbarkeit durch Full Danksharding, Verkle Trees und Stateless Clients radikal zu verbessern. Mit dieser Vision strebt Ethereum an, die dezentrale Infrastruktur des globalen Finanzsystems zu werden."
+    },
+"bnb": {
+    "description": "BNB (Build and Build) ist die native Kryptowährung von Binance, der weltweit größten Kryptobörse, geschaffen 2017. Ursprünglich als ERC-20-Token gestartet, migrierte BNB zur eigenen BNB Chain. Durch regelmäßige Token-Burn-Mechanismen behält BNB eine deflationäre Struktur.",
+    "description2": "Das BNB-Chain-Ökosystem expandiert mit opBNB Layer-2-Lösung und BNB Greenfield dezentraler Speicherplattform. Niedrige Gebühren und hoher Durchsatz machen es zur bevorzugten Infrastruktur für GameFi, SocialFi und DEX-Projekte. Binance Launchpad bietet frühen Zugang zu aufstrebenden Projekten.",
+    "description3": "BNB Chain macht bedeutende Fortschritte bei der Integration von KI und Blockchain. KI-gesteuerte DeFi-Protokolle, automatisierte Portfolioverwaltung und intelligente Handelsbots entwickeln sich schnell auf BNB Chain. Multi-Chain-Brückeninfrastruktur ermöglicht nahtlose Interaktion mit Ethereum und anderen Ökosystemen.",
+    "description4": "Binances regulatorische Compliance-Bemühungen und globale Lizenzierungsprozesse stärken die institutionelle Glaubwürdigkeit von BNB. Betriebsgenehmigungen in Schlüsselmärkten wie Dubai, Frankreich und Japan signalisieren weiteres Wachstum innerhalb rechtlicher Rahmenbedingungen.",
+    "description5": "BNBs periodische Token-Burn-Events werden durch den Auto-Burn-Mechanismus vollständig transparent und algorithmisch durchgeführt. Diese Burns zur Reduzierung des Gesamtangebots auf 100 Millionen gehören zu den grundlegenden Faktoren für BNBs langfristige Wertsteigerungserwartungen."
+    },
+"sol": {
+    "description": "Solana (SOL) ist eine Next-Generation-Blockchain-Plattform, gegründet 2020 von Anatoly Yakovenko, bekannt für außergewöhnliche Leistung. Durch den einzigartigen Proof-of-History (PoH) Konsens verarbeitet Solana über 65.000 Transaktionen pro Sekunde und gilt als eine der stärksten Ethereum-Alternativen.",
+    "description2": "Solanas Firedancer-Validator-Client zielt auf verbesserte Zuverlässigkeit und Leistung ab. Der Memecoin-Trend und NFT-Kompression haben enorme Beliebtheit bei Privatanlegern erzeugt. Das Saga-Telefon und die mobile dApp-Store-Vision gestalten die mobile Zukunft von Web3.",
+    "description3": "Solana Pay ermöglicht Krypto-Zahlungen in physischen und digitalen Geschäften. Durch die Shopify-Integration können E-Commerce-Seiten SOL und USDC direkt akzeptieren. Diese Entwicklung steigert die praktische Nutzbarkeit von Kryptowährungen im täglichen Handel konkret.",
+    "description4": "Solanas DePIN-Projekte (Decentralized Physical Infrastructure Networks) ziehen Aufmerksamkeit auf sich. Die Migration von Helium zu Solana, Render Networks GPU-Rendering und DIMOs Fahrzeugdatenplattform ermöglichen dezentrales Management realer Infrastruktur.",
+    "description5": "Solana wächst schnell im institutionellen DeFi-Bereich. Jupiter-Aggregator, Marinade Finance Liquid Staking und Jito MEV-Lösungen ermöglichen anspruchsvolle Finanzprodukte. Hohe Geschwindigkeit und niedrige Kosten machen Solana ideal für Hochfrequenzhandel und algorithmische Strategien."
+    },
+"xrp": {
+    "description": "XRP ist ein digitales Zahlungsprotokoll von Ripple Labs, gegründet 2012 von Chris Larsen und Jed McCaleb. Das XRP Ledger wickelt Transaktionen innerhalb von 3-5 Sekunden zu nahezu null Kosten ab. Ripple arbeitet mit über 300 Finanzinstituten weltweit zusammen.",
+    "description2": "Die positive Lösung des Rechtsstreits mit der SEC hat neues Vertrauen im XRP-Ökosystem geschaffen. Ripples RLUSD-Stablecoin und Ripple Payments beschleunigen die Integration traditioneller Finanzinstitute. AMM- und dezentrale Identitätslösungen unterstützen ein umfassendes Finanzökosystem.",
+    "description3": "Das EVM-Sidechain-Projekt des XRP Ledger ermöglicht Ethereum-kompatible Smart Contracts im XRP-Ökosystem. Diese Entwicklung erleichtert Ethereum-Entwicklern die Migration bestehender Projekte und erweitert die Anwendungsfälle des Netzwerks erheblich.",
+    "description4": "Ripples institutionelle Digital-Asset-Custody-Lösungen nach der Metaco-Übernahme bieten sichere und konforme Infrastruktur für Banken. CBDC-Beratungsdienste bilden eine wichtige Säule von Ripples institutioneller Strategie.",
+    "description5": "Die XRP-Community erweitert das Ökosystem durch Blockchain-basierte Spendenplattformen, dezentrale Börsenprojekte und Bildungsinitiativen. Der niedrige Energieverbrauch und die umweltfreundliche Architektur machen XRP attraktiv für nachhaltigkeitsorientierte Investoren."
+    },
+"ada": {
+    "description": "Cardano (ADA) ist eine Blockchain-Plattform der dritten Generation von Charles Hoskinson, Ethereum-Mitbegründer, basierend auf akademischer Forschung und begutachteten wissenschaftlichen Arbeiten. Das Ouroboros Proof-of-Stake-Protokoll verfolgt einen wissenschaftlichen Ansatz für Sicherheit, Skalierbarkeit und Nachhaltigkeit.",
+    "description2": "Cardanos Chang-Hard-Fork leitete die Voltaire-Governance-Ära ein mit direkten Stimmrechten für ADA-Inhaber. Die Hydra-Layer-2-Lösung bietet theoretisch unbegrenzte Transaktionskapazität und hebt Leistungserwartungen auf ein neues Niveau.",
+    "description3": "Cardanos Partner-Chains-Framework ermöglicht anderen Blockchains, eigene Ketten mit Cardanos Sicherheitsmodell zu erstellen. Dieser modulare Ansatz hat das Potenzial, Cardano in ein Netzwerk von Blockchain-Plattformen zu verwandeln.",
+    "description4": "Das Atala-PRISM-Projekt für digitale Identität in Afrika speichert Millionen akademischer Aufzeichnungen verifizierbar auf der Blockchain. Über 5 Millionen Schüler in Äthiopien werden durch die Vereinbarung mit der Regierung auf dem Cardano-Netzwerk verwaltet.",
+    "description5": "Die Midnight-Privacy-Sidechain ermöglicht Unternehmen und Einzelpersonen, Blockchain-Technologie zu nutzen und gleichzeitig sensible Daten zu schützen. Die Marlowe-Sprache für Finanz-Smart-Contracts ermöglicht die Erstellung von Verträgen ohne Programmierkenntnisse und erweitert Cardanos Nutzerbasis."
+    }
+},
+"footer": {
+    "copyright": "© {{year}} Binance Live Chart. Alle Rechte vorbehalten."
+},
+"theme": {
+    "light": "Hellmodus",
+    "dark": "Dunkelmodus"
+},
+"tags": {
+    "crypto": "#Krypto",
+    "defi": "#DeFi",
+    "blockchain": "#Blockchain",
+    "web3": "#Web3",
+    "trading": "#Trading",
+    "investment": "#Investition",
+    "altcoin": "#Altcoin"
+},
+"tooltips": {
+    "themeToggle": "Thema ändern",
+    "langToggle": "Sprache ändern"
+}
+}

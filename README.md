@@ -1,16 +1,93 @@
-# React + Vite
+# Binance Live Chart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time cryptocurrency price tracking application powered by Binance WebSocket API. Built with **React 19**, **Vite 8**, **Tailwind CSS v4**, and the **ReUI** design system — featuring live area charts, multi-coin support, dark/light theme, and i18n (TR/EN/DE).
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8_beta-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Real-Time Data** — Live price streaming via Binance WebSocket (1s interval)
+- **6 Cryptocurrencies** — BTC, ETH, BNB, SOL, XRP, ADA with USDT pairs
+- **Interactive Area Chart** — Recharts-based smooth gradient chart with custom tooltips
+- **Dark / Light Theme** — Binance-inspired dark mode as default, toggleable
+- **Multi-Language (i18n)** — Turkish, English, German with full translations
+- **Mobile Responsive** — Hamburger menu with liquid glass UI buttons
+- **Atomic Design** — Structured as atoms, molecules, organisms, templates
+- **ReUI Design System** — CSS variable-based theming with Radix UI primitives
+- **Live Page Title** — Browser tab shows current price in real-time
+- **Binance Trade Link** — Direct link to trade the selected coin on Binance
+- **20 Unit Tests** — Vitest + Testing Library coverage
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Technology |
+|---|---|
+| Framework | React 19 |
+| Build Tool | Vite 8.0.0-beta |
+| Styling | Tailwind CSS v4, ReUI Design System |
+| Charts | Recharts |
+| State | React Context + Custom Hooks |
+| i18n | i18next, react-i18next |
+| UI Primitives | Radix UI |
+| Icons | Lucide React |
+| Animation | Motion (Framer Motion) |
+| Testing | Vitest 4, Testing Library, jsdom |
+| Deployment | Vercel |
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── atoms/          # Card, Button, ScrollToTop
+│   ├── molecules/      # ThemeToggle, LanguageSelector
+│   └── organisms/      # Navbar, LiveChart, Footer
+├── contexts/           # ThemeContext (dark/light)
+├── hooks/              # useMultiCryptoWebSocket
+├── i18n/
+│   └── locales/        # tr.json, en.json, de.json
+├── lib/                # utils (cn helper)
+├── utils/              # console-art
+└── __tests__/          # Vitest test suites
+```
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Run tests
+pnpm test
+```
+
+## 📸 Preview
+
+| Dark Mode | Light Mode |
+|---|---|
+| Default Binance-inspired dark theme with `#09090b` background | Clean white theme with full contrast |
+
+## 🌐 Deployment
+
+Configured for **Vercel** with SPA rewrites. Push to `main` branch for automatic deployment.
+
+```json
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
+```
+
+## 📄 License
+
+MIT
