@@ -1,0 +1,79 @@
+{
+"nav": {
+    "title": "Binance Live Chart"
+},
+"market": {
+    "realTimePrice": "Real-Time Price",
+    "change1s": "1s Change",
+    "title": "Market",
+    "trade": "Trade",
+    "perp": "PERP",
+    "loading": "Loading...",
+    "insights": "Market Insights",
+    "dataProvided": "Data provided by Binance"
+},
+"coins": {
+"btc": {
+    "description": "Bitcoin (BTC) is the world's first and largest decentralized digital currency, created in 2009 by the pseudonymous Satoshi Nakamoto. Operating without any central bank or government authority, Bitcoin functions on a peer-to-peer network technology. Using the Proof-of-Work consensus mechanism, the Bitcoin network has a total supply capped at 21 million BTC, a feature that has earned it the title of 'digital gold.' Today, it is the most traded cryptocurrency in global financial markets.",
+    "description2": "Bitcoin's fourth halving event in 2024 reduced block rewards from 6.25 BTC to 3.125 BTC, further restricting new supply. The approval of spot Bitcoin ETFs by the U.S. SEC has dramatically accelerated institutional capital inflows. Second-layer solutions like the Lightning Network are enabling micro-payments and everyday use cases, reinforcing Bitcoin's vision as both a store of value and an active payment network.",
+    "description3": "Bitcoin mining is undergoing a significant transformation toward environmental sustainability through renewable energy adoption. Mining facilities in Iceland, Norway, and Canada utilize geothermal and hydroelectric power, substantially reducing Bitcoin's carbon footprint. Innovations like the Stratum V2 protocol enable miners to operate more efficiently and in a decentralized manner, strengthening overall network security.",
+    "description4": "Developments in Bitcoin programmability are also noteworthy. The Ordinals protocol allows NFT-like digital artifacts to be inscribed on the Bitcoin blockchain, while the BRC-20 token standard enables token creation on the Bitcoin network. These innovations demonstrate Bitcoin's potential to evolve from a pure value transfer network into a broader application platform.",
+    "description5": "From an institutional adoption perspective, companies like MicroStrategy and Tesla, along with various sovereign wealth funds adding Bitcoin to their portfolios, have strengthened the digital gold narrative. Countries like El Salvador accepting Bitcoin as legal tender have reinforced cryptocurrency's global financial inclusion mission. Bitcoin continues advancing toward becoming the cornerstone of future financial infrastructure."
+    },
+"eth": {
+    "description": "Ethereum (ETH) is a decentralized blockchain platform founded in 2015 by Vitalik Buterin, pioneering smart contract technology. Enabling developers to build decentralized applications (dApps), Ethereum forms the foundational infrastructure for DeFi, NFT, and DAO ecosystems. With The Merge upgrade in 2022, Ethereum transitioned to Proof-of-Stake, reducing energy consumption by 99.95%.",
+    "description2": "The Dencun upgrade introduced proto-danksharding (EIP-4844), dramatically reducing costs for Layer 2 solutions. Through rollup networks like Arbitrum, Optimism, and Base, Ethereum can now process tens of thousands of transactions per second at extremely low fees. The ERC-4337 account abstraction standard is bringing user experience closer to Web2 levels.",
+    "description3": "Ethereum's restaking ecosystem, through protocols like EigenLayer, enables staked ETH security to extend across multiple networks. This innovation improves capital efficiency while strengthening Ethereum's capacity to export its security model to other blockchains. Liquid staking derivatives (LSDs) offer users the ability to earn staking yields while simultaneously participating in DeFi protocols.",
+    "description4": "Ethereum continues to be a pioneering platform in decentralized social media (Lens Protocol, Farcaster), decentralized science (DeSci), and real-world asset tokenization (RWA). The tokenization of traditional assets like real estate, bonds, and commodities on Ethereum is opening the door to moving trillion-dollar markets onto the blockchain.",
+    "description5": "The Ethereum Foundation's long-term roadmap aims to radically increase network scalability and accessibility through technologies like full danksharding, Verkle Trees, and stateless clients. With this vision, Ethereum aspires to become not just a blockchain but the decentralized infrastructure for the global financial system."
+    },
+"bnb": {
+    "description": "BNB (Build and Build) is the native cryptocurrency created in 2017 by Binance, the world's largest cryptocurrency exchange, powering the entire Binance ecosystem. Originally launched as an ERC-20 token on Ethereum, BNB later migrated to its own blockchain, BNB Chain. It maintains a deflationary structure through regular token burn mechanisms.",
+    "description2": "The BNB Chain ecosystem continues expanding with opBNB Layer 2 solution and BNB Greenfield decentralized storage platform. Low transaction fees and high throughput make it a preferred infrastructure for GameFi, SocialFi, and DEX projects. Binance Launchpad offers early access to emerging projects, continuously increasing BNB utility.",
+    "description3": "BNB Chain is making significant strides in AI and blockchain integration. AI-powered DeFi protocols, automated portfolio management, and smart trading bots are rapidly developing on BNB Chain. Multi-chain bridge infrastructure enables seamless interaction with Ethereum and other ecosystems.",
+    "description4": "Binance's regulatory compliance efforts and global licensing processes are enhancing BNB's institutional credibility. Operating permits obtained in key markets like Dubai, France, and Japan signal that the BNB ecosystem will continue growing within established legal frameworks.",
+    "description5": "BNB's periodic token burn events are executed in a fully transparent and algorithmic manner through the Auto-Burn mechanism. These burns, aimed at reducing total supply to 100 million, are among the fundamental factors supporting BNB's long-term value appreciation expectations."
+    },
+"sol": {
+    "description": "Solana (SOL) is a next-generation blockchain platform founded in 2020 by Anatoly Yakovenko, distinguished by exceptional performance. Through its unique Proof-of-History (PoH) consensus mechanism, Solana processes over 65,000 transactions per second with low fees and high scalability, making it one of the strongest Ethereum alternatives.",
+    "description2": "Solana's Firedancer validator client aims to significantly improve network reliability and performance. The memecoin frenzy and NFT compression technology have driven immense retail popularity. The Saga phone and mobile dApp Store vision are shaping Web3's mobile future.",
+    "description3": "Solana Pay provides a payment infrastructure enabling crypto payments in physical and digital stores. Through Shopify integration, e-commerce sites can accept SOL and USDC payments directly. This development concretely increases the everyday usability of cryptocurrencies in daily commerce.",
+    "description4": "Solana's DePIN (Decentralized Physical Infrastructure Networks) projects are also drawing attention. The migration of Helium to Solana, Render Network's GPU rendering services, and DIMO's vehicle data platform are enabling decentralized management of real-world infrastructure.",
+    "description5": "Solana is rapidly growing in institutional DeFi. Jupiter aggregator, Marinade Finance liquid staking protocol, and Jito MEV solutions enable sophisticated financial products on Solana. High speed and low cost advantages make Solana ideal for high-frequency trading and algorithmic strategies."
+    },
+"xrp": {
+    "description": "XRP is a digital payment protocol developed by Ripple Labs, founded in 2012 by Chris Larsen and Jed McCaleb. Designed to revolutionize slow and costly international transfers, the XRP Ledger completes transactions within 3-5 seconds at virtually zero cost. Ripple partners with over 300 financial institutions worldwide.",
+    "description2": "The largely favorable resolution of Ripple's legal battle with the SEC created renewed confidence in the XRP ecosystem. Ripple's RLUSD stablecoin and Ripple Payments service accelerate traditional finance integration. AMM and decentralized identity solutions on XRP Ledger support building a comprehensive financial ecosystem.",
+    "description3": "The XRP Ledger's EVM Sidechain project enables Ethereum-compatible smart contracts to run within the XRP ecosystem. This development facilitates Ethereum developers migrating existing projects to XRP Ledger while significantly expanding the network's use cases.",
+    "description4": "Ripple's institutional digital asset custody solutions, following the Metaco acquisition, offer secure and compliant infrastructure for banks and financial institutions. Central bank digital currency (CBDC) consulting services form an important pillar of Ripple's institutional strategy.",
+    "description5": "The XRP community continuously expands the ecosystem through blockchain-based donation platforms, decentralized exchange projects, and educational initiatives. XRP's low energy consumption and environmentally friendly architecture make it an attractive option for sustainability-focused investors."
+    },
+"ada": {
+    "description": "Cardano (ADA) is a third-generation blockchain platform launched in 2017 by Charles Hoskinson, an Ethereum co-founder, built on academic research and peer-reviewed scientific papers. Using the unique Ouroboros Proof-of-Stake consensus protocol, Cardano takes a scientific approach to security, scalability, and sustainability.",
+    "description2": "Cardano's Chang hard fork ushered in the Voltaire governance era, granting ADA holders direct voting rights on network changes. The Hydra Layer 2 scaling solution offers theoretically unlimited transaction capacity, elevating performance expectations to new levels.",
+    "description3": "Cardano's Partner Chains framework allows other blockchains to create customized chains using Cardano's security model and consensus mechanism. This modular approach has the potential to transform Cardano into a network of blockchain platforms.",
+    "description4": "The Atala PRISM digital identity project in Africa aims to store millions of students' academic records in a verifiable manner on the blockchain. Under the agreement with the Ethiopian government, over 5 million students' digital identities are managed on the Cardano network.",
+    "description5": "The Midnight privacy-focused sidechain enables businesses and individuals to benefit from blockchain technology while protecting sensitive data. The Marlowe financial smart contract language allows creating financial contracts without programming knowledge, broadening Cardano's user base."
+    }
+},
+"footer": {
+    "copyright": "© {{year}} Binance Live Chart. All Rights Reserved."
+},
+"theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+},
+"tags": {
+    "crypto": "#Crypto",
+    "defi": "#DeFi",
+    "blockchain": "#Blockchain",
+    "web3": "#Web3",
+    "trading": "#Trading",
+    "investment": "#Investment",
+    "altcoin": "#Altcoin"
+},
+"tooltips": {
+    "themeToggle": "Toggle Theme",
+    "langToggle": "Change Language"
+}
+}

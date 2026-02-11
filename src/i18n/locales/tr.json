@@ -1,0 +1,79 @@
+﻿{
+"nav": {
+    "title": "Binance Live Chart"
+},
+"market": {
+    "realTimePrice": "Gerçek Zamanlı Fiyat",
+    "change1s": "1s Değişim",
+    "title": "Piyasa",
+    "trade": "Al/Sat",
+    "perp": "PERP",
+    "loading": "Yükleniyor...",
+    "insights": "Piyasa Görünümü",
+    "dataProvided": "Veriler Binance tarafından sağlanmaktadır"
+},
+"coins": {
+    "btc": {
+        "description": "Bitcoin (BTC), 2009 yılında Satoshi Nakamoto takma adlı bir kişi veya grup tarafından oluşturulan dünyanın ilk ve en büyük merkeziyetsiz dijital para birimidir. Herhangi bir merkez bankasına veya hükümete bağlı olmadan çalışan Bitcoin, eşler arası (peer-to-peer) ağ teknolojisi üzerinde işlem görür. Proof-of-Work (İş İspatı) konsensüs mekanizmasını kullanan Bitcoin ağında toplam arz 21 milyon BTC ile sınırlıdır ve bu özellik onu dijital altın olarak adlandırılmasına neden olmuştur. Günümüzde küresel finans piyasalarında en çok işlem gören kripto para birimi olarak kurumsal yatırımcılar ve bireysel kullanıcılar tarafından yaygın şekilde tercih edilmektedir.",
+        "description2": "Bitcoin'in 2024 yılında gerçekleşen dördüncü halving etkinliği, blok ödülünü 6.25 BTC'den 3.125 BTC'ye düşürmüş ve arzın daha da kısıtlanmasına yol açmıştır. ABD Menkul Kıymetler ve Borsa Komisyonu (SEC) tarafından onaylanan spot Bitcoin ETF'leri, kurumsal yatırımcıların piyasaya girişini büyük ölçüde hızlandırmıştır. Lightning Network gibi ikinci katman çözümleri sayesinde mikro ödemeler ve günlük kullanım senaryoları giderek yaygınlaşmakta, Bitcoin'in yalnızca bir değer saklama aracı değil aynı zamanda aktif bir ödeme ağı olma vizyonunu güçlendirmektedir.",
+        "description3": "Bitcoin madenciliği, özellikle yenilenebilir enerji kaynaklarına yönelim ile birlikte çevresel sürdürülebilirlik açısından önemli bir dönüşüm geçirmektedir. İzlanda, Norveç ve Kanada gibi ülkelerde jeotermal ve hidroelektrik enerji kullanan madencilik tesisleri, Bitcoin'in karbon ayak izini önemli ölçüde azaltmaktadır. Ayrıca Stratum V2 protokolü gibi yenilikler, madencilerin daha verimli ve merkeziyetsiz bir şekilde çalışmasını sağlayarak ağ güvenliğini artırmaktadır.",
+        "description4": "Bitcoin'in programlanabilirlik alanındaki gelişmeler de dikkat çekmektedir. Ordinals protokolü ile Bitcoin blok zincirine NFT benzeri dijital eserler yazılabilmekte, BRC-20 token standardı ile Bitcoin ağı üzerinde token oluşturulabilmektedir. Bu yenilikler, Bitcoin'in yalnızca bir değer aktarım ağı olmaktan çıkıp daha geniş bir uygulama platformuna dönüşme potansiyelini göstermektedir.",
+        "description5": "Kurumsal benimseme açısından MicroStrategy, Tesla ve çeşitli sovereign wealth fund'ların portföylerine Bitcoin eklemeleri, dijital altın anlatısını güçlendirmiştir. El Salvador ve Orta Afrika Cumhuriyeti gibi ülkelerin Bitcoin'i yasal ödeme aracı olarak kabul etmeleri, kripto paranın küresel finansal kapsayıcılık misyonunu pekiştirmiştir. Bitcoin, geleceğin finansal altyapısının temel taşı olma yolunda ilerlemektedir."
+    },
+    "eth": {
+        "description": "Ethereum (ETH), 2015 yılında Vitalik Buterin tarafından kurulan ve akıllı sözleşme (smart contract) teknolojisinin öncüsü olan merkeziyetsiz bir blok zinciri platformudur. Geliştiricilerin merkeziyetsiz uygulamalar (dApps) oluşturmasına olanak tanıyan Ethereum, DeFi (Merkeziyetsiz Finans), NFT (Değiştirilemez Token) ve DAO (Merkeziyetsiz Otonom Organizasyon) ekosistemlerinin temel altyapısını oluşturur. 2022 yılında The Merge güncellemesiyle Proof-of-Stake konsensüs mekanizmasına geçiş yapan Ethereum, enerji tüketimini %99.95 oranında azaltmıştır.",
+        "description2": "Ethereum'un Dencun güncellemesiyle hayata geçirilen proto-danksharding (EIP-4844) teknolojisi, Layer 2 çözümlerinin maliyetini dramatik şekilde azaltmıştır. Arbitrum, Optimism ve Base gibi rollup ağları sayesinde Ethereum ekosistemi saniyede on binlerce işlemi son derece düşük ücretlerle gerçekleştirebilmektedir. ERC-4337 ile getirilen hesap soyutlama standardı, kullanıcı deneyimini Web2 seviyesine yaklaştırmaktadır.",
+        "description3": "Ethereum'un restaking ekosistemi, EigenLayer gibi protokoller aracılığıyla stake edilen ETH'nin güvenliğini birden fazla ağa genişletmeyi mümkün kılmaktadır. Bu yenilik, sermaye verimliliğini artırırken Ethereum'un güvenlik modelini diğer blok zincirlerine ihraç etme kapasitesini de güçlendirmektedir. Liquid staking türevleri (LSD) ise kullanıcılara stake getirisi ile DeFi katılımını eş zamanlı olarak sürdürme imkânı sunmaktadır.",
+        "description4": "Ethereum, merkeziyetsiz sosyal medya (Lens Protocol, Farcaster), merkeziyetsiz bilim (DeSci) ve gerçek dünya varlıklarının tokenizasyonu (RWA) gibi alanlarda da öncü bir platform olmaya devam etmektedir. Özellikle gayrimenkul, tahvil ve emtia gibi geleneksel varlıkların Ethereum üzerinde tokenize edilmesi, trilyon dolarlık pazarların blok zincirine taşınmasının önünü açmaktadır.",
+        "description5": "Ethereum Vakfı'nın uzun vadeli yol haritası, tam danksharding, Verkle Trees ve durumsuz istemciler gibi teknolojilerle ağın ölçeklenebilirliğini ve erişilebilirliğini radikal şekilde artırmayı hedeflemektedir. Bu vizyonla Ethereum, sadece bir blok zinciri değil küresel finansal sistemin merkeziyetsiz altyapısı olmayı amaçlamaktadır."
+    },
+    "bnb": {
+        "description": "BNB (Build and Build), dünyanın en büyük kripto para borsası Binance tarafından 2017 yılında oluşturulan ve Binance ekosistemini güçlendiren yerel kripto para birimidir. Başlangıçta Ethereum ağında bir ERC-20 token olarak hayatına başlayan BNB, sonrasında kendi blok zinciri olan BNB Chain'e (eski adıyla Binance Smart Chain) taşınmıştır. Token yakma mekanizması sayesinde deflasyonist bir yapıya sahiptir.",
+        "description2": "BNB Chain ekosistemi, opBNB adlı Layer 2 çözümü ve BNB Greenfield merkeziyetsiz depolama platformu ile sürekli genişlemektedir. Düşük işlem ücretleri ve yüksek işlem hacmi kapasitesi sayesinde özellikle GameFi, SocialFi ve merkeziyetsiz borsa projeleri için tercih edilen bir altyapı haline gelmiştir. Binance Launchpad platformu üzerinden yeni projelere erken erişim imkânı sunulmaktadır.",
+        "description3": "BNB Chain, yapay zekâ ve blok zinciri entegrasyonu alanında da önemli adımlar atmaktadır. AI-powered DeFi protokolleri, otomatik portföy yönetimi ve akıllı ticaret botları gibi uygulamalar BNB Chain üzerinde hızla gelişmektedir. Ayrıca çok zincirli (multi-chain) köprü altyapıları sayesinde BNB, Ethereum ve diğer ekosistemlerle sorunsuz şekilde etkileşim kurabilmektedir.",
+        "description4": "Binance'in düzenleyici uyum çalışmaları ve global lisanslama süreçleri, BNB'nin kurumsal güvenilirliğini artırmaktadır. Dubai, Fransa ve Japonya gibi önemli pazarlarda alınan operasyon izinleri, BNB ekosisteminin yasal çerçeve içinde büyümeye devam edeceğinin güçlü sinyallerini vermektedir.",
+        "description5": "BNB'nin periyodik token yakma etkinlikleri, Auto-Burn mekanizması ile tamamen şeffaf ve algoritmik bir şekilde yürütülmektedir. Toplam arzın 100 milyona düşürülmesi hedefi doğrultusunda gerçekleştirilen bu yakma işlemleri, BNB'nin uzun vadeli değer artışı beklentisini destekleyen temel faktörlerden biridir."
+    },
+    "sol": {
+        "description": "Solana (SOL), 2020 yılında Anatoly Yakovenko tarafından kurulan ve yüksek performansıyla öne çıkan yeni nesil bir blok zinciri platformudur. Proof-of-History (PoH) adlı benzersiz konsensüs mekanizması sayesinde saniyede 65.000'den fazla işlem gerçekleştirebilen Solana, düşük işlem ücretleri ve yüksek ölçeklenebilirlik özellikleriyle Ethereum'a en güçlü alternatiflerden biri olarak kabul edilmektedir.",
+        "description2": "Solana'nın Firedancer adlı yeni validatör istemcisi, ağın güvenilirliğini ve performansını önemli ölçüde artırmayı hedeflemektedir. Memecoin furyası ve NFT kompresyon teknolojisi sayesinde Solana, perakende kullanıcılar arasında büyük popülerlik kazanmıştır. Saga telefonu ve mobil odaklı dApp Store vizyonu ile Web3'ün mobil geleceğini şekillendirmektedir.",
+        "description3": "Solana Pay, fiziksel ve dijital mağazalarda kripto ödemelerini mümkün kılan bir ödeme altyapısı sunmaktadır. Shopify entegrasyonu sayesinde e-ticaret sitelerinde doğrudan SOL ve USDC ile ödeme yapılabilmektedir. Bu gelişme, kripto paraların günlük ticarette kullanılabilirliğini somut bir şekilde artırmaktadır.",
+        "description4": "Solana'nın DePIN (Decentralized Physical Infrastructure Networks) alanındaki projeleri de dikkat çekmektedir. Helium ağının Solana'ya taşınması, Render Network'ün GPU rendering hizmetleri ve DIMO'nun araç verileri platformu gibi projeler, gerçek dünya altyapılarının merkeziyetsiz yönetimini mümkün kılmaktadır.",
+        "description5": "Solana, kurumsal DeFi alanında da hızla büyümektedir. Jupiter agregatorü, Marinade Finance liquid staking protokolü ve Jito MEV çözümleri, sofistike finansal ürünlerin Solana üzerinde geliştirilmesini sağlamaktadır. Yüksek hız ve düşük maliyet avantajı, Solana'yı yüksek frekanslı ticaret ve algoritmik stratejiler için ideal bir platform haline getirmektedir."
+    },
+    "xrp": {
+        "description": "XRP, 2012 yılında Chris Larsen ve Jed McCaleb tarafından kurulan Ripple Labs şirketi tarafından geliştirilen dijital bir ödeme protokolüdür. Geleneksel bankacılık sisteminin yavaş ve maliyetli uluslararası para transferi süreçlerini devrimleştirmek amacıyla tasarlanan XRP Ledger, işlemleri 3-5 saniye içinde ve neredeyse sıfır maliyetle gerçekleştirmektedir.",
+        "description2": "Ripple'ın SEC ile sürdürdüğü hukuki mücadelenin büyük ölçüde olumlu sonuçlanması, XRP ekosisteminde yeni bir güven dalgası yaratmıştır. Ripple'ın RLUSD stablecoin'i ve Ripple Payments hizmeti, geleneksel finans kuruluşlarının kripto dünyasına entegrasyonunu hızlandırmaktadır. XRP Ledger üzerindeki AMM ve merkeziyetsiz kimlik çözümleri de kapsamlı bir finansal ekosistem oluşturmaktadır.",
+        "description3": "XRP Ledger'ın EVM Sidechain projesi, Ethereum uyumlu akıllı sözleşmelerin XRP ekosistemi içinde çalıştırılmasını mümkün kılmaktadır. Bu gelişme, Ethereum geliştiricilerinin mevcut projelerini XRP Ledger'a taşımasını kolaylaştırırken ağın kullanım alanlarını önemli ölçüde genişletmektedir.",
+        "description4": "Ripple'ın Metaco satın alma sonrası kurumsal dijital varlık saklama çözümleri, bankalar ve finans kuruluşları için güvenli ve uyumlu altyapılar sunmaktadır. Merkez bankası dijital para birimi (CBDC) danışmanlık hizmetleri de Ripple'ın kurumsal stratejisinin önemli bir ayağını oluşturmaktadır.",
+        "description5": "XRP topluluğu, blok zinciri tabanlı bağış platformları, merkeziyetsiz borsa projeleri ve eğitim girişimleri ile ekosistemi sürekli olarak genişletmektedir. XRP'nin düşük enerji tüketimi ve çevre dostu yapısı, sürdürülebilirlik odaklı yatırımcılar için de cazip bir seçenek oluşturmaktadır."
+    },
+    "ada": {
+        "description": "Cardano (ADA), Ethereum'un kurucu ortaklarından Charles Hoskinson tarafından 2017 yılında başlatılan ve akademik araştırmalara dayalı, hakemli bilimsel makalelerle desteklenen üçüncü nesil bir blok zinciri platformudur. Ouroboros adlı benzersiz Proof-of-Stake konsensüs protokolünü kullanan Cardano, güvenlik, ölçeklenebilirlik ve sürdürülebilirlik konularında bilimsel bir yaklaşım benimser.",
+        "description2": "Cardano'nun Chang hard fork'u ile hayata geçirilen Voltaire yönetişim çağı, ADA sahiplerine ağ üzerindeki değişiklikler hakkında doğrudan oy kullanma hakkı tanımıştır. Hydra Layer 2 ölçeklendirme çözümü, teorik olarak sınırsız işlem kapasitesi sunarak Cardano'nun performans beklentilerini yeni bir seviyeye taşımaktadır.",
+        "description3": "Cardano'nun Partner Chains çerçevesi, diğer blok zincirlerinin Cardano'nun güvenlik modelini ve konsensüs mekanizmasını kullanarak kendi özelleştirilmiş zincirlerini oluşturmasına olanak tanımaktadır. Bu modüler yaklaşım, Cardano'yu bir blok zinciri platformlar ağına dönüştürme potansiyeli taşımaktadır.",
+        "description4": "Afrika'daki Atala PRISM dijital kimlik projesi, milyonlarca öğrencinin akademik kayıtlarını blok zinciri üzerinde doğrulanabilir şekilde saklamayı amaçlamaktadır. Etiyopya hükümeti ile yapılan anlaşma kapsamında 5 milyondan fazla öğrencinin dijital kimliği Cardano ağı üzerinde yönetilmektedir.",
+        "description5": "Midnight gizlilik odaklı yan zinciri, işletme ve bireylere hassas verilerini korurken blok zinciri teknolojisinden faydalanma imkânı sunmaktadır. Marlowe finansal akıllı sözleşme dili ise programlama bilgisi gerektirmeden finansal sözleşmeler oluşturulmasını mümkün kılarak Cardano'nun kullanıcı tabanını genişletmektedir."
+    }
+},
+"footer": {
+    "copyright": "© {{year}} Binance Live Chart. Tüm Hakları Saklıdır."
+},
+"theme": {
+    "light": "Açık Mod",
+    "dark": "Koyu Mod"
+},
+"tags": {
+    "crypto": "#Kripto",
+    "defi": "#DeFi",
+    "blockchain": "#Blockchain",
+    "web3": "#Web3",
+    "trading": "#Trading",
+    "investment": "#Yatırım",
+    "altcoin": "#Altcoin"
+},
+"tooltips": {
+    "themeToggle": "Tema Değiştir",
+    "langToggle": "Dil Değiştir"
+}
+}
