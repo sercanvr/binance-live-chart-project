@@ -1,10 +1,11 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ExternalLink, TrendingUp, TrendingDown } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 import { useMultiCryptoWebSocket } from '../../hooks/useMultiCryptoWebSocket';
 import { useTheme } from '../../contexts/ThemeContext';
 import Card from '../atoms/Card';
+import { CoinIcon } from '../../utils/coinIcons';
 /**
  * Özel Tooltip Bileşeni
  * Recharts tooltip'ini Binance temasına uygun şekilde stillendirir.
@@ -83,24 +84,20 @@ const LiveChart = () => {
         {/* === ANA GRAFİK KARTI (ReUI Pattern) === */}
         <div className="bg-muted/30 dark:bg-muted/20 border border-border rounded-3xl p-2.5
                         shadow-[0_2px_20px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
-          <Card className="rounded-3xl bg-background border-border/50 p-5 md:p-6">
+          <Card className="rounded-[28px] bg-background border-border/50 p-5 md:p-6">
 
             {/* Kart Başlığı: Coin bilgisi + border-bottom */}
             <div className="flex items-center justify-between pb-5 mb-5 border-b border-border">
               <div className="flex items-center gap-3">
                 {/* Coin Logosu */}
                 <div className="flex items-center justify-center size-10 rounded-full bg-muted/80 overflow-hidden">
-                  <img
-                    src={`https://cryptologos.cc/logos/${getCoinSlug(selectedCoin)}-logo.png`}
-                    alt={selectedCoin}
-                    className="w-7 h-7"
-                  />
+                  <CoinIcon symbol={coinSymbol} className="w-7 h-7" />
                 </div>
                 {/* Coin Adı + Alt Başlık */}
                 <div className="flex flex-col gap-0.5">
                   <h1 className="text-base font-semibold text-foreground uppercase leading-none flex items-center gap-2">
                     {coinSymbol}/USDT
-                    <span className="text-[10px] bg-muted text-muted-foreground px-1.5 py-0.5 rounded border border-border font-medium">
+                    <span className="text-[10px] bg-[#FCD535] text-gray-700 px-1.5 py-0.5 rounded border border-[#D4A000] font-medium font-semibold">
                       {t('market.perp')}
                     </span>
                   </h1>
@@ -184,7 +181,7 @@ const LiveChart = () => {
               </ResponsiveContainer>
 
               {/* Binance Logo Watermark - Sol Alt Köşe */}
-              <div className="absolute bottom-2 left-2 flex items-center gap-1.5 opacity-30 pointer-events-none select-none">
+              <div className="absolute bottom-2 left-2 flex items-center gap-1.5 opacity-100 pointer-events-none select-none">
                 <svg viewBox="0 0 126.61 126.61" className="h-3.5 w-3.5" fill="#F0B90B">
                   <path d="M38.73 53.2l24.59-24.58 24.6 24.6 14.3-14.31L63.32 0l-38.9 38.9 14.31 14.3zM0 63.31l14.3-14.31 14.31 14.31L14.3 77.62 0 63.31zm38.73 10.11l24.59 24.59 24.6-24.6 14.31 14.32-38.9 38.9-38.91-38.91 14.31-14.3zM97.41 63.31l14.3-14.31 14.31 14.31-14.31 14.31-14.3-14.31z" />
                   <path d="M77.83 63.3L63.32 48.78 52.59 59.51l-1.24 1.23-2.54 2.54 14.51 14.51 14.51-14.51.01-.01-.01.03z" />
@@ -289,11 +286,7 @@ const LiveChart = () => {
                   )}
 
                   <div className="flex items-center gap-3 pl-2">
-                    <img
-                      src={`https://cryptologos.cc/logos/${getCoinSlug(coin)}-logo.png`}
-                      className="w-8 h-8 rounded-full"
-                      alt={coin}
-                    />
+                    <CoinIcon symbol={coin} className="w-8 h-8" />
                     <div>
                       <div className={`font-bold uppercase ${
                         isSelected
