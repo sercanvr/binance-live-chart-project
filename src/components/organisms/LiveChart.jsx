@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, TrendingUp, TrendingDown } from 'lucide-react';
+import { TrendingUp, TrendingDown } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 import { useMultiCryptoWebSocket } from '../../hooks/useMultiCryptoWebSocket';
 import { useTheme } from '../../contexts/ThemeContext';
@@ -90,7 +90,7 @@ const LiveChart = () => {
             <div className="flex items-center justify-between pb-5 mb-5 border-b border-border">
               <div className="flex items-center gap-3">
                 {/* Coin Logosu */}
-                <div className="flex items-center justify-center size-10 rounded-full bg-muted/80 overflow-hidden">
+                <div className="flex items-center justify-center size-10 rounded-full bg-muted/80 overflow-hidden border-2 border-gray-700 dark:border-gray-700">
                   <CoinIcon symbol={coinSymbol} className="w-7 h-7" />
                 </div>
                 {/* Coin Adı + Alt Başlık */}
@@ -321,13 +321,13 @@ const LiveChart = () => {
           href={`https://www.binance.com/en/trade/${coinSymbol.toUpperCase()}_USDT`}
           target="_blank"
           rel="noopener noreferrer"
-          className="group w-full bg-primary/90 backdrop-blur-md hover:bg-primary text-primary-foreground font-bold
+          className="group w-full bg-primary/90 backdrop-blur-md hover:bg-primary text-gray-700 dark:text-white font-bold
                     py-4 rounded-xl shadow-sm transition-all active:scale-[0.97]
                     flex items-center justify-center gap-2.5 text-base
-                    border border-white/20 dark:border-white/10"
+                    border-2 border-gray-700 dark:border-white"
         >
           <span>{t('market.trade')} {coinSymbol.toUpperCase()}</span>
-          <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <i className="fa-solid fa-right-from-bracket text-sm" aria-hidden="true"></i>
         </a>
       </div>
     </div>

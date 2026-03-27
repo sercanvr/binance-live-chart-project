@@ -27,5 +27,3 @@ export const CoinIcon = ({ symbol, className = "w-7 h-7" }) => {
     />
   );
 };
-
-
