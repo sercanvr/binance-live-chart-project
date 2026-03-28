@@ -27,7 +27,7 @@ return (
                     rounded-lg bg-[#FCD535] shadow-lg
                     hover:brightness-110 cursor-pointer
                     text-white hover:text-white
-                    border-2 border-[#364153] dark:border-white
+                    border-2 border-[#2E343E] dark:border-white
                     dark:hover:text-white"
         >
         <ChevronUp className="h-5 w-5" strokeWidth={2.5} />

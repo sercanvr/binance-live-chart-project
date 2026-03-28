@@ -60,10 +60,10 @@ return (
         >
             <img
             src="/blc-logo.webp"
-            alt="Binance Live Chart Logo"
-            className="h-8 w-8 rounded-lg"
+            alt="₿inance Live Chart Logo"
+            className="h-8 w-8 rounded-lg [filter:drop-shadow(0px_0px_0.75px_rgba(0,0,0,1))]"
             />
-            <span className="text-base font-bold text-foreground tracking-tight">
+            <span className="text-[20px] font-bold text-[#fcd535] tracking-tight [text-shadow:0px_0px_2px_rgba(0,0,0,1)]">
             {t('nav.title')}
             </span>
         </button>
@@ -78,7 +78,7 @@ return (
         <button
             onClick={() => setMobileMenuOpen(true)}
             className="flex md:hidden items-center justify-center h-9 w-9 rounded-md
-                    hover:bg-accent transition-colors cursor-pointer text-foreground"
+                    hover:bg-accent transition-colors cursor-pointer text-[#fcd535]"
             aria-label="Open menu"
         >
             <Menu className="h-5 w-5" />
@@ -97,10 +97,10 @@ return (
             >
             <img
                 src="/blc-logo.webp"
-                alt="Binance Live Chart Logo"
-                className="h-8 w-8 rounded-lg"
+                alt="₿inance Live Chart Logo"
+                className="h-8 w-8 rounded-lg [filter:drop-shadow(0px_0px_0.75px_rgba(0,0,0,1))]"
             />
-            <span className="text-base font-bold text-foreground tracking-tight">
+            <span className="text-[20px] font-bold text-[#fcd535] tracking-tight [text-shadow:0px_0px_2px_rgba(0,0,0,1)]">
                 {t('nav.title')}
             </span>
             </button>
@@ -118,13 +118,13 @@ return (
           {/* 5 liquid glass buton — üst tarafa çekildi (pt-16) */}
         <div className="flex-1 flex flex-col items-center pt-16 gap-3 px-6">
             <button onClick={() => handleMobileLang('tr')} className={glassBtn}>
-                TR Türkçe
+                Turkish
             </button>
             <button onClick={() => handleMobileLang('en')} className={glassBtn}>
-                EN English
+                English
             </button>
             <button onClick={() => handleMobileLang('de')} className={glassBtn}>
-                DE Deutsch
+                Deutsch
             </button>
             <button onClick={() => handleMobileTheme('light')} className={glassBtn}>
             <Sun className="h-4.5 w-4.5" />
