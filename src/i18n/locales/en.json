@@ -1,11 +1,12 @@
 {
 "nav": {
-    "title": "Binance Live Chart"
+    "title": "₿inance Live Chart"
 },
 "market": {
     "realTimePrice": "Real-Time Price",
     "change1s": "1s Change",
-    "title": "Market",
+    "title": "Crypto Assets",
+    "about": "{{symbol}} Overview",
     "trade": "Trade",
     "perp": "PERP",
     "loading": "Loading...",
@@ -57,7 +58,7 @@
     }
 },
 "footer": {
-    "copyright": "© {{year}} Binance Live Chart. All Rights Reserved."
+    "copyright": "© {{year}} ₿inance Live Chart. All Rights Reserved."
 },
 "theme": {
     "light": "Light Mode",

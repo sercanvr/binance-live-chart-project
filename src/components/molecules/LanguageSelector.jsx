@@ -4,7 +4,7 @@ import { Globe } from 'lucide-react';
 import Button from '../atoms/Button';
 
 const LANGUAGES = [
-    { code: 'tr', label: 'TR', fullName: 'Türkçe' },
+    { code: 'tr', label: 'TR', fullName: 'Turkish' },
     { code: 'en', label: 'EN', fullName: 'English' },
     { code: 'de', label: 'DE', fullName: 'Deutsch' },
 ];
@@ -49,21 +49,20 @@ return (
             <DropdownMenu.Content
             sideOffset={8}
             align="end"
-            className="z-50 min-w-[140px] rounded-lg border border-border bg-card p-1 shadow-lg
+            className="z-50 min-w-[122px] rounded-lg border border-border bg-card p-1 shadow-lg
                         animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2"
             >
             {LANGUAGES.map((lang) => (
                 <DropdownMenu.Item
                 key={lang.code}
                 onSelect={() => handleLanguageChange(lang.code)}
-                className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm cursor-pointer
+                className={`flex items-center justify-center rounded-md px-3 py-2 text-sm text-center cursor-pointer
                     outline-none transition-colors
                     ${currentLang === lang.code
-                    ? 'bg-primary/10 text-primary font-semibold'
-                    : 'text-foreground hover:bg-accent'
+                    ? 'bg-primary/10 text-[#B8860B] dark:text-[#FCD535] font-semibold'
+                    : 'text-[#B8860B] dark:text-foreground hover:bg-accent hover:text-[#9A7400] dark:hover:text-[#FCD535]'
                     }`}
                 >
-                <span className="font-mono text-xs w-5">{lang.label}</span>
                 <span>{lang.fullName}</span>
                 </DropdownMenu.Item>
             ))}

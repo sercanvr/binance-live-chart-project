@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { TrendingUp, TrendingDown } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
@@ -43,7 +43,7 @@ const LiveChart = () => {
   useEffect(() => {
     if (currentMarket) {
       const formattedPrice = formatPrice(currentMarket.price);
-      document.title = `$${formattedPrice} | ${selectedCoin.slice(0, 3).toUpperCase()} USDT | Binance Live Chart`;
+      document.title = `$${formattedPrice} | ${selectedCoin.slice(0, 3).toUpperCase()} USDT | ₿inance Live Chart`;
     }
   }, [currentMarket, selectedCoin]);
 
@@ -82,8 +82,7 @@ const LiveChart = () => {
       <div className="flex-1 flex flex-col gap-6 w-full">
 
         {/* === ANA GRAFİK KARTI (ReUI Pattern) === */}
-        <div className="bg-muted/30 dark:bg-muted/20 border border-border rounded-3xl p-2.5
-                        shadow-[0_2px_20px_rgba(0,0,0,0.08)] dark:shadow-[0_2px_20px_rgba(0,0,0,0.4)]">
+        <div className="bg-muted/30 dark:bg-muted/20 border border-border rounded-3xl p-2.5 shadow-sm">
           <Card className="rounded-[28px] bg-background border-border/50 p-5 md:p-6">
 
             {/* Kart Başlığı: Coin bilgisi + border-bottom */}
@@ -200,7 +199,7 @@ const LiveChart = () => {
         {/* === PİYASA BİLGİSİ KARTI === */}
         <Card className="p-5 md:p-6 bg-background">
           <h3 className="text-lg font-semibold text-foreground mb-2 uppercase">
-            {coinSymbol} {t('market.insights')}
+            {t('market.about', { symbol: coinSymbol.toUpperCase() })}
           </h3>
           <div className="min-h-[100px]">
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -257,8 +256,7 @@ const LiveChart = () => {
       <div className="w-full lg:w-80 flex flex-col gap-6">
 
         {/* Market Listesi Kartı */}
-        <Card className="p-0 bg-background h-fit rounded-xl overflow-hidden
-                        shadow-[0_1px_8px_rgba(0,0,0,0.06)] dark:shadow-[0_1px_8px_rgba(0,0,0,0.3)]">
+        <Card className="p-0 bg-background h-fit rounded-xl overflow-hidden shadow-sm">
           <div className="p-4 border-b border-border">
             <h3 className="text-lg font-semibold text-foreground">{t('market.title')}</h3>
           </div>
@@ -321,10 +319,10 @@ const LiveChart = () => {
           href={`https://www.binance.com/en/trade/${coinSymbol.toUpperCase()}_USDT`}
           target="_blank"
           rel="noopener noreferrer"
-          className="group w-full bg-primary/90 backdrop-blur-md hover:bg-primary text-gray-700 dark:text-white font-bold
-                    py-4 rounded-xl shadow-sm transition-all active:scale-[0.97]
+          className="group w-full bg-primary backdrop-blur-md text-gray-700 dark:text-white hover:text-white dark:hover:text-[#2E343E] font-bold
+                    py-4 rounded-xl shadow-sm active:scale-[0.97]
                     flex items-center justify-center gap-2.5 text-base
-                    border-2 border-gray-700 dark:border-white"
+                    border-2 border-gray-700 dark:border-white hover:border-primary dark:hover:border-primary"
         >
           <span>{t('market.trade')} {coinSymbol.toUpperCase()}</span>
           <i className="fa-solid fa-right-from-bracket text-sm" aria-hidden="true"></i>
@@ -333,22 +331,5 @@ const LiveChart = () => {
     </div>
   );
 };
-
-/**
- * Coin slug yardımcı fonksiyonu
- * CryptoLogos API'si için coin isimlerini slug formatına çevirir.
- */
-function getCoinSlug(symbol) {
-  const coin = symbol.slice(0, 3).toLowerCase();
-  const map = {
-    btc: 'bitcoin-btc',
-    eth: 'ethereum-eth',
-    bnb: 'bnb-bnb',
-    sol: 'solana-sol',
-    xrp: 'xrp-xrp',
-    ada: 'cardano-ada',
-  };
-  return map[coin] || 'bitcoin-btc';
-}
 
 export default LiveChart;
