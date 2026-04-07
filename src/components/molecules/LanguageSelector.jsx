@@ -16,12 +16,15 @@ const currentLang = i18n.language;
 // Dil değiştir
 const handleLanguageChange = (langCode) => {
     i18n.changeLanguage(langCode);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 0);
 };
 
 return (
     <Tooltip.Provider delayDuration={200}>
     <Tooltip.Root>
-        <DropdownMenu.Root>
+        <DropdownMenu.Root modal={false}>
           {/* Tetikleyici buton: Dünya ikonu + aktif dil kodu */}
         <Tooltip.Trigger asChild>
             <DropdownMenu.Trigger asChild>
@@ -35,8 +38,8 @@ return (
           {/* Tooltip içeriği — Sarı arka plan, beyaz yazı */}
         <Tooltip.Portal>
             <Tooltip.Content
-            sideOffset={8}
-            className="z-50 rounded-md bg-[#FCD535] px-3 py-1.5 text-xs font-medium text-gray-700 shadow-md
+            sideOffset={14}
+            className="z-50 rounded-md bg-[#FCD535] px-3 py-1.5 text-xs font-medium text-[#2C2C2C] shadow-md
                         animate-in fade-in-0 zoom-in-95"
             >
             {t('tooltips.langToggle')}
@@ -47,9 +50,9 @@ return (
           {/* Açılır menü içeriği */}
         <DropdownMenu.Portal>
             <DropdownMenu.Content
-            sideOffset={8}
-            align="end"
-            className="z-50 min-w-[122px] rounded-lg border border-border bg-card p-1 shadow-lg
+            sideOffset={14}
+            align="center"
+            className="z-50 min-w-[120px] rounded-lg border border-border bg-card p-1 shadow-lg
                         animate-in fade-in-0 zoom-in-95 data-[side=bottom]:slide-in-from-top-2"
             >
             {LANGUAGES.map((lang) => (

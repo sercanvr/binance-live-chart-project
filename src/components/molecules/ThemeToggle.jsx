@@ -32,8 +32,8 @@ return (
         </Tooltip.Trigger>
         <Tooltip.Portal>
         <Tooltip.Content
-            sideOffset={8}
-            className="z-50 rounded-md bg-[#FCD535] px-3 py-1.5 text-xs font-medium text-gray-700 shadow-md
+            sideOffset={14}
+            className="z-50 rounded-md bg-[#FCD535] px-3 py-1.5 text-xs font-medium text-[#2C2C2C] shadow-md
                     animate-in fade-in-0 zoom-in-95"
         >
             {t('tooltips.themeToggle')}

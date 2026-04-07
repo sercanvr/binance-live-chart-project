@@ -1,6 +1,6 @@
 ﻿{
 "nav": {
-    "title": "₿inance Live Chart"
+    "title": "Binance Live Chart"
 },
 "market": {
     "realTimePrice": "Gerçek Zamanlı Fiyat",
@@ -8,6 +8,7 @@
     "title": "Kripto Varlıklar",
     "about": "{{symbol}} Hakkında",
     "trade": "Al/Sat",
+    "officialSite": "Resmi Siteye Git",
     "perp": "PERP",
     "loading": "Yükleniyor...",
     "insights": "Piyasa Görünümü",
@@ -58,7 +59,7 @@
     }
 },
 "footer": {
-    "copyright": "© {{year}} ₿inance Live Chart. Tüm Hakları Saklıdır."
+    "copyright": "© {{year}} Binance Live Chart. Tüm Hakları Saklıdır."
 },
 "theme": {
     "light": "Açık Mod",
