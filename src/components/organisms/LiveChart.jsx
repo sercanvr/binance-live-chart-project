@@ -43,7 +43,7 @@ const LiveChart = () => {
   useEffect(() => {
     if (currentMarket) {
       const formattedPrice = formatPrice(currentMarket.price);
-      document.title = `$${formattedPrice} | ${selectedCoin.slice(0, 3).toUpperCase()} USDT | ₿inance Live Chart`;
+      document.title = `$${formattedPrice} | ${selectedCoin.slice(0, 3).toUpperCase()} USDT | Binance Live Chart`;
     }
   }, [currentMarket, selectedCoin]);
 
@@ -75,8 +75,30 @@ const LiveChart = () => {
   const coinSymbol = selectedCoin.slice(0, 3);
   const coinKey = coinSymbol.toLowerCase();
 
+  const brandStyles = {
+    btc: { color: '#F7931A', url: 'https://bitcoin.org' },
+    eth: { color: '#627EEA', url: 'https://ethereum.org' },
+    bnb: { color: '#F0B90B', url: 'https://www.bnbchain.org' },
+    sol: { gradient: 'linear-gradient(90deg, rgba(11, 242, 168, 1) 33%, rgba(145, 107, 224, 1) 66%, rgba(215, 35, 253, 1) 100%)', url: 'https://solana.com' },
+    xrp: { color: '#23292F', darkColor: '#E2E8F0', url: 'https://ripple.com/xrp' },
+    ada: { color: '#0030B2', darkColor: '#638cff', url: 'https://cardano.org' },
+  };
+
+  const activeBrand = brandStyles[coinKey] || { color: '#FCD535', url: '#' };
+  
+  // Başlık stili: Gradient var ise onu kullan, yoksa sabit color kullan
+  const currentTitleColor = isDark && activeBrand.darkColor ? activeBrand.darkColor : activeBrand.color;
+  const titleStyle = activeBrand.gradient
+    ? { backgroundImage: activeBrand.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', color: 'transparent', display: 'inline-block' }
+    : { color: currentTitleColor };
+
+  // Resmi Site Butonu için border/yazı rengi
+  const officialBorderColor = activeBrand.gradient ? '#14F195' : currentTitleColor;
+  // Resmi site arkaplan (koyu modda okunabilirliği artırmak için hafif beyazlık karıştırıyoruz)
+  const officialBgColor = isDark ? `rgba(255, 255, 255, 0.12)` : `${officialBorderColor}1A`;
+
   return (
-    <div className="flex flex-col lg:flex-row gap-6 w-full max-w-7xl mx-auto p-4 items-start">
+    <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 w-full max-w-[1536px] mx-auto px-2 md:px-8 py-4 md:py-6 items-start">
 
       {/* SOL KOLON: Grafik + Bilgi Kartları */}
       <div className="flex-1 flex flex-col gap-6 w-full">
@@ -124,11 +146,11 @@ const LiveChart = () => {
             </div>
 
             {/* === RECHARTS AREA CHART === */}
-            <div className="relative h-48 md:h-56 w-full overflow-hidden rounded-xl">
+            <div className="relative h-64 md:h-90 w-full overflow-hidden rounded-xl">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart
                   data={rechartsData}
-                  margin={{ top: 8, left: 0, right: 0, bottom: 0 }}
+                  margin={{ top: 15, left: 0, right: 0, bottom: 0 }}
                 >
                   {/* Gradient Tanımları */}
                   <defs>
@@ -180,12 +202,12 @@ const LiveChart = () => {
               </ResponsiveContainer>
 
               {/* Binance Logo Watermark - Sol Alt Köşe */}
-              <div className="absolute bottom-2 left-2 flex items-center gap-1.5 opacity-100 pointer-events-none select-none">
-                <svg viewBox="0 0 126.61 126.61" className="h-3.5 w-3.5" fill="#F0B90B">
+              <div className="absolute bottom-2 left-2 flex items-center gap-1 opacity-90 pointer-events-none select-none">
+                <svg viewBox="0 0 126.61 126.61" className="h-5 w-5" fill="#F0B90B">
                   <path d="M38.73 53.2l24.59-24.58 24.6 24.6 14.3-14.31L63.32 0l-38.9 38.9 14.31 14.3zM0 63.31l14.3-14.31 14.31 14.31L14.3 77.62 0 63.31zm38.73 10.11l24.59 24.59 24.6-24.6 14.31 14.32-38.9 38.9-38.91-38.91 14.31-14.3zM97.41 63.31l14.3-14.31 14.31 14.31-14.31 14.31-14.3-14.31z" />
                   <path d="M77.83 63.3L63.32 48.78 52.59 59.51l-1.24 1.23-2.54 2.54 14.51 14.51 14.51-14.51.01-.01-.01.03z" />
                 </svg>
-                <span className="text-[10px] font-medium text-muted-foreground/50">Binance</span>
+                <span className="text-xs font-semibold text-foreground/80 dark:text-foreground">Binance</span>
               </div>
             </div>
 
@@ -198,7 +220,7 @@ const LiveChart = () => {
 
         {/* === PİYASA BİLGİSİ KARTI === */}
         <Card className="p-5 md:p-6 bg-background">
-          <h3 className="text-lg font-semibold text-foreground mb-2 uppercase">
+          <h3 className="text-lg font-extrabold mb-3 uppercase" style={titleStyle}>
             {t('market.about', { symbol: coinSymbol.toUpperCase() })}
           </h3>
           <div className="min-h-[100px]">
@@ -249,6 +271,45 @@ const LiveChart = () => {
               {t('tags.altcoin')}
             </span>
           </div>
+
+          {/* Resmi Web Sitesi Butonu */}
+          <div className="mt-8 pt-5 border-t border-border/60 flex justify-start">
+            <div 
+              className={activeBrand.gradient ? "rounded-lg p-[3px] shadow-sm transform active:scale-[0.97] transition-all" : ""}
+              style={activeBrand.gradient ? { backgroundImage: activeBrand.gradient } : {}}
+            >
+              <a
+                href={activeBrand.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group inline-flex backdrop-blur-md font-bold
+                           py-2.5 px-5 items-center justify-center text-sm
+                           ${activeBrand.gradient 
+                             ? 'rounded-[5px] bg-background w-full h-full' 
+                             : 'rounded-lg shadow-sm active:scale-[0.97] transition-all border-[3px]'}`}
+                style={
+                  activeBrand.gradient
+                    ? {}
+                    : {
+                        borderColor: officialBorderColor,
+                        color: officialBorderColor,
+                        backgroundColor: officialBgColor
+                      }
+                }
+              >
+                <span className="flex items-center gap-2" style={activeBrand.gradient ? { 
+                  backgroundImage: activeBrand.gradient, 
+                  WebkitBackgroundClip: 'text', 
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text', 
+                  color: 'transparent'
+                } : {}}>
+                  <span>{t('market.officialSite')}</span>
+                  <i className="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
+                </span>
+              </a>
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -270,7 +331,10 @@ const LiveChart = () => {
               return (
                 <div
                   key={coin}
-                  onClick={() => setSelectedCoin(coin)}
+                  onClick={() => {
+                    setSelectedCoin(coin);
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                  }}
                   className={`flex items-center justify-between p-4 cursor-pointer transition-all
                     border-b border-border/50 last:border-0 hover:bg-muted/50 relative
                     ${isSelected
@@ -319,10 +383,10 @@ const LiveChart = () => {
           href={`https://www.binance.com/en/trade/${coinSymbol.toUpperCase()}_USDT`}
           target="_blank"
           rel="noopener noreferrer"
-          className="group w-full bg-primary backdrop-blur-md text-gray-700 dark:text-white hover:text-white dark:hover:text-[#2E343E] font-bold
+          className="group w-full bg-primary backdrop-blur-md text-[#2C2C2C] dark:text-[#FEFDDF] hover:text-[#FEFDDF] dark:hover:text-[#FEFDDF] font-bold
                     py-4 rounded-xl shadow-sm active:scale-[0.97]
                     flex items-center justify-center gap-2.5 text-base
-                    border-2 border-gray-700 dark:border-white hover:border-primary dark:hover:border-primary"
+                    border-[3px] border-[#2C2C2C] dark:border-[#FEFDDF] hover:border-[#2C2C2C] dark:hover:border-[#FEFDDF]"
         >
           <span>{t('market.trade')} {coinSymbol.toUpperCase()}</span>
           <i className="fa-solid fa-right-from-bracket text-sm" aria-hidden="true"></i>

@@ -1,6 +1,6 @@
 {
 "nav": {
-    "title": "₿inance Live Chart"
+    "title": "Binance Live Chart"
 },
 "market": {
     "realTimePrice": "Echtzeit-Preis",
@@ -8,6 +8,7 @@
     "title": "Krypto-Assets",
     "about": "{{symbol}} Überblick",
     "trade": "Handeln",
+    "officialSite": "Zur offiziellen Website",
     "perp": "PERP",
     "loading": "Laden...",
     "insights": "Markt-Einblicke",
@@ -58,7 +59,7 @@
     }
 },
 "footer": {
-    "copyright": "© {{year}} ₿inance Live Chart. Alle Rechte vorbehalten."
+    "copyright": "© {{year}} Binance Live Chart. Alle Rechte vorbehalten."
 },
 "theme": {
     "light": "Hellmodus",

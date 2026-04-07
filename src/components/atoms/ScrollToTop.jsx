@@ -26,9 +26,8 @@ return (
         className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center
                     rounded-lg bg-[#FCD535] shadow-lg
                     hover:brightness-110 cursor-pointer
-                    text-white hover:text-white
-                    border-2 border-[#2E343E] dark:border-white
-                    dark:hover:text-white"
+                    text-[#2C2C2C] dark:text-[#FEFDDF]
+                    border-[3px] border-[#2C2C2C] dark:border-[#FEFDDF]"
         >
         <ChevronUp className="h-5 w-5" strokeWidth={2.5} />
         </button>

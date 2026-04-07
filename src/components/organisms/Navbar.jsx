@@ -11,25 +11,31 @@ const Navbar = () => {
     const isDark = theme === 'dark';
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-// Mobil menü açıkken body scroll'unu kilitle
-useEffect(() => {
-    if (mobileMenuOpen) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
-}, [mobileMenuOpen]);
+    // Mobil menü açıkken arkaplanın kaymasını (scroll) engelle
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+            // Mobil menü açıldığında en üste scrollamak isterseniz:
+            // window.scrollTo({ top: 0, behavior: 'instant' });
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [mobileMenuOpen]);
 
 // Logo tıklanınca sayfayı yenile
 const handleLogoClick = () => {
     window.location.reload();
 };
 
-// Mobil menüde dil değiştir ve menüyü kapat
+// Mobil menüde dil değiştir ve menüyü kapat, üst kısıma scroll yap
 const handleMobileLang = (lang) => {
     i18n.changeLanguage(lang);
     setMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'instant' });
 };
 
 // Mobil menüde tema değiştir ve menüyü kapat
@@ -50,20 +56,20 @@ return (
     <>
       {/* Liquid Glass Navbar */}
     <nav className="sticky top-0 z-40 w-full border-b border-border/60
-            bg-background/60 backdrop-blur-md">
-        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4">
+            bg-background/60 backdrop-blur-sm">
+        <div className="mx-auto flex h-14 max-w-[1536px] items-center justify-between px-3 md:px-8">
           {/* Sol taraf: Logo + Başlık — hover opacity 0.7, tıkla → yenile */}
         <button
             onClick={handleLogoClick}
-            className="flex items-center gap-3 cursor-pointer bg-transparent border-none p-0 hover:opacity-70"
+            className="flex items-center gap-2 md:gap-3 cursor-pointer bg-transparent border-none p-0 hover:opacity-70"
             aria-label="Reload page"
         >
             <img
             src="/blc-logo.webp"
-            alt="₿inance Live Chart Logo"
-            className="h-8 w-8 rounded-lg [filter:drop-shadow(0px_0px_0.75px_rgba(0,0,0,1))]"
+            alt="Binance Live Chart Logo"
+            className="h-8 w-8 shrink-0 object-contain rounded-lg [filter:drop-shadow(0px_0px_0.75px_rgba(0,0,0,1))]"
             />
-            <span className="text-[20px] font-bold text-[#fcd535] tracking-tight [text-shadow:0px_0px_2px_rgba(0,0,0,1)]">
+            <span className="text-[25px] leading-none font-normal text-[#fcd535] [text-shadow:0px_0px_2px_rgba(0,0,0,1)] [font-family:'Lobster',sans-serif]">
             {t('nav.title')}
             </span>
         </button>
@@ -76,47 +82,21 @@ return (
 
           {/* Sağ taraf: Mobil — Hamburger butonu */}
         <button
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="flex md:hidden items-center justify-center h-9 w-9 rounded-md
                     hover:bg-accent transition-colors cursor-pointer text-[#fcd535]"
-            aria-label="Open menu"
+            aria-label="Toggle menu"
         >
-            <Menu className="h-5 w-5" />
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
         </div>
     </nav>
 
       {/* === MOBİL TAM EKRAN MENÜ (Liquid Glass) === */}
     {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-background/80 backdrop-blur-xl flex flex-col md:hidden">
-          {/* Üst bar: Logo + Kapat (X) butonu */}
-        <div className="flex items-center justify-between px-4 h-14 border-b border-border/60">
-            <button
-            onClick={() => { setMobileMenuOpen(false); handleLogoClick(); }}
-            className="flex items-center gap-3 cursor-pointer bg-transparent border-none p-0 hover:opacity-70"
-            >
-            <img
-                src="/blc-logo.webp"
-                alt="₿inance Live Chart Logo"
-                className="h-8 w-8 rounded-lg [filter:drop-shadow(0px_0px_0.75px_rgba(0,0,0,1))]"
-            />
-            <span className="text-[20px] font-bold text-[#fcd535] tracking-tight [text-shadow:0px_0px_2px_rgba(0,0,0,1)]">
-                {t('nav.title')}
-            </span>
-            </button>
-            {/* X butonu: hover → kırmızı */}
-            <button
-            onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center justify-center h-9 w-9 rounded-md
-                    cursor-pointer text-foreground hover:text-red-500"
-            aria-label="Close menu"
-            >
-            <X className="h-5 w-5" />
-            </button>
-        </div>
-
-          {/* 5 liquid glass buton — üst tarafa çekildi (pt-16) */}
-        <div className="flex-1 flex flex-col items-center pt-16 gap-3 px-6">
+        <div className="fixed top-14 inset-x-0 bottom-0 z-40 bg-background/60 backdrop-blur-sm flex flex-col md:hidden border-t border-border/60">
+          {/* 5 liquid glass buton */}
+          <div className="flex flex-col items-center pt-8 gap-3 px-6 h-full overflow-y-auto pb-8">
             <button onClick={() => handleMobileLang('tr')} className={glassBtn}>
                 Turkish
             </button>
